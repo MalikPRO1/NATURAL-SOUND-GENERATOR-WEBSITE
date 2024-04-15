@@ -1,0 +1,41 @@
+---
+import '@/styles/global.css';
+
+interface Props {
+  description?: string;
+  title?: string;
+}
+
+const title = Astro.props.title || 'Wave Wonders: Background sounds for concentration and relaxation';
+const description =
+  Astro.props.description ||
+  "Wave Wonders is an ambient Background sounds for concentration and relaxation.";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="Astro description" name="description" />
+    <meta content="width=device-width" name="viewport" />
+    <meta content={Astro.generator} name="generator" />
+    <meta content="#18181b" name="theme-color" />
+    <link href="/favicon.svg" rel="icon" type="image/svg+xml" />
+
+    <title>Wave Wonders</title>
+    <meta content={title} name="title" />
+    <meta content={description} name="description" />
+
+    <meta content={title} property="og:title" />
+    <meta content={description} property="og:description" />
+    <meta content="Wave-Wonders" property="og:site_name" />
+    <meta content="https://wave-wonders.netlify.app/" property="og:url" />
+    <meta content="website" property="og:type" />
+    <meta content="https://wave-wonders.netlify.app/og.png" property="og:image" />
+
+    <meta content="summary_large_image" name="twitter:card" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

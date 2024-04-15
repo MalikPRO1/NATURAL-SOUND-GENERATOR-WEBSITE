@@ -1,0 +1,69 @@
+---
+import { Container } from '@/components/container';
+import { count as soundCount } from '@/lib/sounds';
+
+const count = soundCount();
+---
+
+<div class="about">
+  <Container>
+    <div class="titleWrapper">
+      <h2 class="title">About Us?</h2>
+      <div class="line"></div>
+    </div>
+    <p class="desc">
+        Welcome to Wave Wonders – <span>your ambient sound generator.</span>
+        Your portal to tranquility infused with technology. 
+        Amidst the chaos of modern life, we offer an oasis where you can immerse yourself in the enchanting symphonies of nature. 
+        Our story is one of crafting calm, drawing inspiration from the serene moments found in sun-drenched forests and ocean shores.
+        In a world where finding moments of peace feels like a luxury, we stand ready to provide sanctuary. 
+        Our platform curates authentic sounds, capturing the essence of untouched wilderness and rhythmic ocean waves. 
+        What sets us apart is our dedication to immersive authenticity and personalized tranquility. 
+        Whether you seek to unwind after a long day or find focus in your work, our diverse range of sounds supports your well-being.
+        Join our community of nature enthusiasts, where stories and experiences are shared in harmony. 
+        Behind every sound lies a team committed to excellence, ensuring quality and authenticity in every aspect of our service.
+        Embark on your journey towards tranquility and rejuvenation with Natural Sound Generator. 
+        Let the timeless melodies of nature guide you towards peace and harmony, precisely when you need it most. 
+        Thank you for choosing us as your companion on the path to serenity. Together, let's reconnect with nature.
+    </p>
+  </Container>
+</div>
+
+<style>
+  .about {
+    padding: 80px 0;
+
+    & .titleWrapper {
+      display: flex;
+      column-gap: 12px;
+      align-items: center;
+
+      & .title {
+        margin-bottom: 12px;
+        font-family: var(--font-display);
+        font-size: var(--font-lg);
+        font-weight: 600;
+      }
+
+      & .line {
+        flex-grow: 1;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          var(--color-neutral-300),
+          transparent
+        );
+        transform: translateY(-0.25rem);
+      }
+    }
+
+    & .desc {
+      line-height: 1.7;
+      color: var(--color-foreground-subtle);
+
+      & span {
+        color: var(--color-foreground);
+      }
+    }
+  }
+</style>
